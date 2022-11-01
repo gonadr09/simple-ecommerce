@@ -17,6 +17,6 @@
 
 @media (max-width: 800px) {
   .footer {
-    height: 10%;
+    height: 10vh;
   }
 }
