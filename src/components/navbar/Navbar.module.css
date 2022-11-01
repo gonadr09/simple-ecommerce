@@ -19,11 +19,14 @@
   margin: 0 3rem;
   position: relative;
   color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar a {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-primary);
 }
 
 .navbar a.active {
@@ -36,6 +39,8 @@
   font-size: 23.95px;
   background-color: transparent;
   border: none;
+  font-size: calc(10px + 2vmin);
+  color: var(--color-primary);
 }
 
 .navbar ul li div p {
@@ -55,6 +60,13 @@
 .navbar ul div button {
   background-color: transparent;
   border: none;
-  font-size: 2.5rem;
-  margin-left: -2rem
+  font-size: calc(10px + 2vmin);
+}
+
+@media (max-width: 800px) {
+  .navbar li {
+    margin: 7px;
+    flex-flow: column;
+  }
+  
 }

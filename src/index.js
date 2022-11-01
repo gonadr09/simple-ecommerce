@@ -35,8 +35,6 @@ import AuthProvider from "./auth/AuthProvider";
 
     Exitooooos y paciencia!
 
-    
-
 */
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

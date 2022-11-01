@@ -66,3 +66,14 @@ tfoot tr td {
   width: 280px;
   place-self: flex-end;
 }
+
+@media (max-width: 800px) {
+  .checkout {
+    height: 80vh;
+  }
+
+  .checkout table {
+    width: 95%;
+    margin: auto;
+  }
+}

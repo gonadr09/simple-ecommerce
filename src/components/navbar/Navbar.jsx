@@ -25,8 +25,8 @@ const Navbar = () => {
 
   const handleLogout = () => {
     //setUserAuth({username: '', token: '', isAuth: false})
-    dispatch({type: TYPES.LOGOUT})
-  }
+    dispatch({ type: TYPES.LOGOUT });
+  };
 
   return (
     <nav className={styles.navbar}>
@@ -38,7 +38,7 @@ const Navbar = () => {
 
       <ul>
         <li>
-        <Link to="/">
+          <Link to="/">
             <small>Inicio</small>
           </Link>
         </li>
@@ -49,7 +49,7 @@ const Navbar = () => {
         </li>
         <li>
           <button onClick={handleLogout}>
-            Salir
+            <small> Salir</small>
           </button>
         </li>
       </ul>
@@ -63,11 +63,12 @@ const Navbar = () => {
             <p>{quantityCart}</p>
             <div>🛒</div>
           </div>
+          <div>
+            <button onClick={clear}>
+              <small>❌</small>
+            </button>
+          </div>
         </li>
-        <div>
-          <button onClick={clear}>❌</button>
-        </div>
-        <li></li>
       </ul>
     </nav>
   );

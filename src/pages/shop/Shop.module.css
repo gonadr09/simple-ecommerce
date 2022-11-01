@@ -11,3 +11,9 @@
 button{
   cursor: pointer;
 }
+
+@media (max-width: 800px) {
+  .container {
+    height: 80vh;
+  }
+}
