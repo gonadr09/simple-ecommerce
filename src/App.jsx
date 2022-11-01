@@ -1,11 +1,10 @@
 import React from "react";
-import Shop from "./pages/shop/Shop";
+import AppRoutes from "./routes/AppRoutes";
+
 
 const App = () => {
   return (
-    <div>
-      <Shop />
-    </div>
+    <AppRoutes />
   );
 };
 

@@ -1,0 +1,68 @@
+.checkout {
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: var(--color-text);
+  display: grid;
+  place-content: center;
+}
+
+.checkout table {
+  color: var(--color-text);
+  background-color: var(--color-background-light);
+  height: 200px;
+  width: 650px;
+  margin: 20px 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 15px;
+}
+
+.checkout h2 {
+  font-size: 2rem;
+}
+
+thead tr th {
+  padding: 10px;
+}
+
+tbody tr td {
+  padding: 10px 0px;
+}
+
+tfoot {
+  background-color: #161616;
+}
+
+tfoot tr td {
+  font-weight: bold;
+  padding: 25px 0px;
+}
+
+.checkout h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.checkout table tbody tr td img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.checkout button {
+  background-color: var(--color-primary);
+  padding: 10px;
+  font-weight: bold;
+  width: 280px;
+  place-self: flex-end;
+}

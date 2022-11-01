@@ -1,28 +1,21 @@
-// crear provider, es neceario crear el contexto previamente
+// crear provider, es necesario crear el contexto previamente
 
-// estado de autenticacion sugerido
+import React, { useState, useReducer } from 'react'
+import { authReducer, initialState } from '../reducers/authReducer'
+import { AuthContext } from './AuthContext'
 
-/* 
+const AuthProvider = ({children}) => {
 
-    {
-        isAuth: false,
-        user: null,
-    }
-
-*/
-
-/* 
-
-import React from 'react'
-
-export const AuthProvider = ({children}) => {
-
-    const [isAuth, setIsAuth] = useState(false)
-    const [user, setUser] = useState(null)
+  const [userForm, setUserForm] = useState({username: '', password:''})
+  
+  //const [userAuth, setUserAuth] = useState({username: '', token: '', isAuth: false})
+  const [state, dispatch] = useReducer(authReducer, initialState)
 
   return (
-    <AuthContext.Provider value={{}}>
+    <AuthContext.Provider value={{userForm, setUserForm, state, dispatch}}>
+      {children}
+    </AuthContext.Provider>
   )
 }
 
-*/
+export default AuthProvider

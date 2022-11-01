@@ -7,3 +7,7 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+button{
+  cursor: pointer;
+}

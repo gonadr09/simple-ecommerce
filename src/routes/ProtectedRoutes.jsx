@@ -1,22 +1,18 @@
 // TODO implementar hoc para proteger rutas
 
-/* 
+import React from "react";
+import { useContext } from "react";
+import { AuthContext } from "../auth/AuthContext";
+import { Navigate } from "react-router-dom";
 
-import React from 'react'
+const ProtectedRoutes = ({ children, preventUrl }) => {
+  const { state } = useContext(AuthContext);
 
-const ProtectedRoutes = ({children}) => {
-    
-    const {isAuth} = useContext(AuthContext)
+  if (state.isAuth) {
+    return children;
+  }
 
-    if(isAuth){
-        return children
-    }
+  return <Navigate to={preventUrl} />;
+};
 
-    return <Navigate to="/login" />
-
-}
-
-export default ProtectedRoutes
-
-
-*/
+export default ProtectedRoutes;

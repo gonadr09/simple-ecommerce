@@ -7,8 +7,9 @@
   border-radius: 100px;
   background-color: var(--color-background-light);
   height: 200px;
-  width: 500px;
+  width: 700px;
   margin: 20px;
+  padding: 0 15px;
 }
 
 .card img {
@@ -33,4 +34,18 @@
 .card h5 {
   font-size: 2rem;
   margin-right: 40px;
+}
+
+.card div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+}
+.card button {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  border: none;
 }

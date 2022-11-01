@@ -12,10 +12,13 @@
 .navbar ul {
   display: flex;
   list-style: none;
+  justify-content: center;
 }
 
 .navbar li {
   margin: 0 3rem;
+  position: relative;
+  color: var(--color-text);
 }
 
 .navbar a {
@@ -25,4 +28,33 @@
 
 .navbar a.active {
   color: #f00;
+}
+
+.navbar li button {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 23.95px;
+  background-color: transparent;
+  border: none;
+}
+
+.navbar ul li div p {
+  position: absolute;
+  min-width: 2rem;
+  top: -10px;
+  left: -10px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #f00;
+}
+
+.navbar ul div button {
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  margin-left: -2rem
 }

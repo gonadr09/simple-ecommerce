@@ -1,1 +1,3 @@
-// crear contexto con la funcion correspondiente
+import { createContext } from "react";
+
+export const AuthContext = createContext();
