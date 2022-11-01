@@ -1,4 +1,4 @@
-# Simple Ecommerce 
+# Simple Ecommerce 🛒
 Simple ecommerce hecho con React JS
 Práctica de useContext para el carrito de compras y useReducer para la autenticación. 
 
@@ -9,7 +9,7 @@ Práctica de useContext para el carrito de compras y useReducer para la autentic
 Ejercicio de práctica para Codo a Codo 4.0
 
 ## 🎮 ¿Cómo clonar?
-1) git clone https://github.com/gonadr09/todo-list-react
+1) git clone https://github.com/gonadr09/simple-ecommerce
 2) cd todo-list-react
 3) npm i
 4) npm start
