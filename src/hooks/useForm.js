@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { useNavigate } from 'react-router-dom'
-import { TYPES } from '../reducers/authReducer'
 
 const useForm = (context) => {
-    const { userForm, setUserForm, dispatch } = useContext(context);
+    const { userForm, setUserForm, login } = useContext(context);
 
     let navigate = useNavigate();
     
@@ -14,15 +13,13 @@ const useForm = (context) => {
     
     const handleSubmit = (e) => {
       e.preventDefault();
-      const userLogged = {
+      const userData = {
         user: userForm.username,
         token: Date.now(),
         isAuth: true
       }
 
-      dispatch({type: TYPES.LOGIN, payload: userLogged})
-      // setUserAuth(userLogged)
-      
+      login(userData)      
       navigate("/", {replace: true}); 
     };
 

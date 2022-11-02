@@ -1,4 +1,6 @@
-// no es obligatorio, pero es buena practica
+export const initialAuthReducer = () => {
+  return JSON.parse(localStorage.getItem("auth")) || initialState
+}
 
 export const initialState = {
   username: null,

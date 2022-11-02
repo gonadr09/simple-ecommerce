@@ -4,36 +4,24 @@ import ProductCheckout from "../../components/product-checkout/ProductsCheckout"
 import { CartContext } from "../../context/cart/CartContext";
 import styles from "./Checkout.module.css";
 
-// 👍 TODO implementar esta vista, en la medida de lo posible crear componentes para reutilizar
-
-// 👍 esta vista debe mostrar el total de los productos en el carrito, asi como la suma, y un boton para finalizar la compra.
-
-// 👍 se debera simular la compra, y mostrar un mensaje de compra exitosa
-
-// 👍 pueden implementarlo como deseen (recuerden que el contexto esta manejando el estado que mantiene los productos en el estado)
 
 const Checkout = () => {
-  const { cart, clear } = useContext(CartContext);
+  const { cart, clear, priceCart } = useContext(CartContext);
 
-  const totalCart = cart.reduce(
-    (acc, cur) => acc + cur.item.price * cur.quantity,
-    0
-  );
-
-  const [sold, setSold] = useState(false);
+  const [purchase, setPurchase] = useState(false);
 
   const handlePurchase = () => {
     clear();
-    setSold(true);
+    setPurchase(true);
   };
 
-  if (sold) {
+  if (purchase) {
     return (
       <div className={styles.checkout}>
         <h2>🙌 MUCHAS GRACIAS POR TU COMPRA 🙌</h2>
       </div>
     );
-  } else if (totalCart === 0) {
+  } else if (priceCart === 0) {
     return (
       <div className={styles.checkout}>
         <h2>No hay productos en el carrito</h2>
@@ -71,7 +59,7 @@ const Checkout = () => {
               <td></td>
               <td></td>
               <td>TOTAL</td>
-              <td>$ {totalCart}</td>
+              <td>$ {priceCart}</td>
             </tr>
           </tfoot>
         </table>

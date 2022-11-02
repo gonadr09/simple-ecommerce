@@ -1,7 +1,3 @@
-// 👍 TODO Implementar sistema de rutas
-
-// 👍 TODO! Importar librerías necesarias
-
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Shop from "../pages/shop/Shop";
@@ -10,6 +6,7 @@ import Layout from "../components/layout/Layout";
 import ProtectedRoutes from "./ProtectedRoutes";
 import PublicRoute from "./PublicRoute";
 import Checkout from "../pages/checkout/Checkout";
+
 
 const AppRoutes = () => {
   return (

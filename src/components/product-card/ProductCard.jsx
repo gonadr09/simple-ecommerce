@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./ProductCard.module.css";
 
-// pueden editar este componente para agregarle mas funcionalidad, estilos, etc.
-
 const ProductCard = ({ id, image, alt, title, descript, price, addItem, item, removeItem }) => {
   
   const quantity = item.length > 0 ? item[0].quantity: 0;

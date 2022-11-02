@@ -3,30 +3,10 @@ import { AuthContext } from "../../auth/AuthContext";
 import { CartContext } from "../../context/cart/CartContext";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
-import { TYPES } from "../../reducers/authReducer";
-
-// 👍 TODO implementar el ruteo con la libreria correspondiente
-
-// 👍 TODO crear un componente que muestra el nombre del usuario logueado
-
-// 👍 TODO crear un componente que permita ver cuantos items hay en el carrito
-
-// 👍 TODO! recordar que las librerias deben ser instaladas con npm install
 
 const Navbar = () => {
-  const { cart, clear } = useContext(CartContext);
-  const { state, dispatch } = useContext(AuthContext);
-
-  const quantityCart = cart.reduce((acc, cur) => acc + cur.quantity, 0);
-  const priceCart = cart.reduce(
-    (acc, cur) => acc + cur.item.price * cur.quantity,
-    0
-  );
-
-  const handleLogout = () => {
-    //setUserAuth({username: '', token: '', isAuth: false})
-    dispatch({ type: TYPES.LOGOUT });
-  };
+  const { clear, quantityCart, priceCart } = useContext(CartContext);
+  const { state, logout } = useContext(AuthContext);
 
   return (
     <nav className={styles.navbar}>
@@ -48,7 +28,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <button onClick={handleLogout}>
+          <button onClick={logout}>
             <small> Salir</small>
           </button>
         </li>
